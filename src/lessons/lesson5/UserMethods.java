@@ -1,6 +1,5 @@
 package lessons.lesson5;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class UserMethods {
@@ -14,6 +13,7 @@ public class UserMethods {
 
         String aboutYou = getNameAndSurname("Alex", "Mushkambarian", 34);
         System.out.println(aboutYou);
+        sumFromConsole();
 
         int sumOfOrder = 100;
         int finalSum = returnSumFromConsole() + sumOfOrder;
