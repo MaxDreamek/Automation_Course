@@ -30,7 +30,7 @@ public class StringMethods {
         String str = "My name is Alex";
 
         System.out.println(str.indexOf('M'));
-        System.out.println(str.indexOf("is"));
+        System.out.println(str.indexOf("Al"));
         System.out.println(str.indexOf("sada"));
     }
     public static void toCharArrayMethods() {
@@ -74,7 +74,7 @@ public class StringMethods {
     public static void concatMethod() {
         String text1 = "Hello ";
         String text2 = "world";
-        String result = text1.concat(text2);
+        String result = text1.concat(" " + text2);
         System.out.println(result);
         endsWithMethod();
     }
@@ -92,4 +92,5 @@ public class StringMethods {
         System.out.println(ends2);
 
     }
+
 }
