@@ -1,5 +1,6 @@
 package homeworks.hm7;
 
+
 import java.util.Arrays;
 
 public class Hm7 {
@@ -13,11 +14,8 @@ public class Hm7 {
 
         for (int i = 0; i < intArray.length; i++) {
             intArray[i] = (int) (Math.random() * 101);
-        }
-        for (int maxNum :
-                intArray) {
-            if (maxNum > arrayMaxValue) {
-                arrayMaxValue = maxNum;
+            if (intArray[i] > arrayMaxValue) {
+                arrayMaxValue = intArray[i];
             }
         }
         System.out.println("Максимальное значение " + arrayMaxValue);
