@@ -12,7 +12,7 @@ public class RandomTest {
         // (2, 20]
         // Math.random() * (max - min) + min + 1;
 
-        double biggerThanTwoToTwenty = Math.random() * (20 - 2) + 2 + 2;
+        double biggerThanTwoToTwenty = Math.random() * (20 - 2) + 2 + 1;
 
         // [2, 20)
         // Math.random() * (max - min) + min;
@@ -20,12 +20,13 @@ public class RandomTest {
         double twoToUpToTwenty = Math.random() * (20 - 2) + 2;
         double [] testArrays = new double[100];
         for (int i = 0; i < testArrays.length; i++) {
-            testArrays[i] =  (Math.random() * (21 - 3 ) + 3);
+            testArrays[i] =  (int) (Math.random() * (20 - 2) + 2);
             if (testArrays[i] == 2.00){
                 System.out.println(true);
             }
         }
         System.out.println(Arrays.toString(testArrays));
+
     }
 
 }
