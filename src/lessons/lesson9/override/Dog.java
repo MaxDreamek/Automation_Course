@@ -10,4 +10,3 @@ public class Dog extends Animal{
         eat();
     }
 }
-// Класс это шаблон для объекта

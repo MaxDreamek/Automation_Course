@@ -9,6 +9,8 @@ public class Posidelki {
 //        System.out.println(toJadenCase2("toJadenCase doesn't return a valide JadenCase String! try again please :)\", \"Most Trees Are Blue"));
 
         System.out.println(toJadenCase("How can mirrors be real if our eyes aren't real"));
+        double a = 2.66;
+        System.out.println(10 % a);
 
     }
 
