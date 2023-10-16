@@ -1,4 +1,4 @@
-package homeworks;
+package homeworks.hm13;
 
 public class Hm13 {
     public static void main(String[] args) {
