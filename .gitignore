@@ -27,3 +27,12 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+.idea/
+*.iml
+*.iws
+
+log/
+target/
+/allure-results/
+/build/reports/
