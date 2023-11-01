@@ -25,25 +25,15 @@ public class PhysicalPerson extends Client {
 
     @Override
     public void deposit(double addMoney) {
-        if (addMoney <= 0) {
-            throw new IllegalArgumentException("Сумма пополнения не может быть 0 или отрицательной");
-        } else {
-            setBalance(getBalance() + addMoney);
-        }
+        checkForNegativeSumArgument(addMoney, "Сумма пополнения не может быть 0 или отрицательной", true);
+        setBalance(getBalance() + addMoney);
     }
 
     @Override
     public void moneyWithdrawal(double withdrawalAmount) {
-        if (withdrawalAmount <= 0) {
-            throw new IllegalArgumentException("Сумма снятия не может быть отрицательной или нулем");
-        } else {
-            double resultOfTransaction = getBalance() - withdrawalAmount;
-            if (resultOfTransaction > 0) {
-                setBalance(resultOfTransaction);
-            } else {
-                throw new IllegalArgumentException("На Вашем балансе не достаточно средств для снятия " + withdrawalAmount +
-                        " UAH. На вашем счету " + getBalance() + " UAH");
-            }
-        }
+        checkForNegativeSumArgument(withdrawalAmount, "Сумма снятия не может быть отрицательной или нулем", true);
+        double resultOfTransaction = getBalance() - withdrawalAmount;
+        checkResultOfTransaction(resultOfTransaction, withdrawalAmount);
+        setBalance(resultOfTransaction);
     }
 }
