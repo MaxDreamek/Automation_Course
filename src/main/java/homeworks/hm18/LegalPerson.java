@@ -1,6 +1,6 @@
 package homeworks.hm18;
 
-public class LegalPerson extends Client{
+public class LegalPerson extends Client {
     private final String DEPOSIT_TERM;
     private final String WITHDRAW_TERM;
 
@@ -8,9 +8,11 @@ public class LegalPerson extends Client{
         DEPOSIT_TERM = "Комиссия на пополнение счета составляет 0%.";
         WITHDRAW_TERM = "Комиссия на снятие наличных средств составляет 1%.";
     }
+
     public LegalPerson(double balance) {
         super(balance);
     }
+
     @Override
     public void showMyBalance() {
         System.out.println(getBalance());
@@ -24,7 +26,7 @@ public class LegalPerson extends Client{
     @Override
     public void deposit(double addMoney) {
         checkForNegativeSumArgument(addMoney, "Сумма пополнения не может быть 0 или отрицательной", true);
-            setBalance(getBalance() + addMoney);
+        setBalance(getBalance() + addMoney);
     }
 
     @Override
