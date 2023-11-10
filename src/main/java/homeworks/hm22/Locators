@@ -1,0 +1,16 @@
+
+                    XPATH
+
+    1.логотип //img[@alt='Rozetka Logo']
+    2 кнопка Каталог //button[@id='fat-menu']
+    3 кнопка микрофон(в инпуте поиск) //button[contains(@class, 'search-form__microphone')]
+    4 кнопка корзины (//ul[@class='header-actions']//button)[last()]
+                 //button[@rzopencart]
+
+
+                    CSS
+    1 логотип img[alt='Rozetka Logo']
+    2 кнопка Каталог button#fat-menu
+    3 кнопка микрофон(в инпуте поиск) button[class*='search-form__microphone']
+    4 кнопка корзины ul.header-actions :nth-child(7) button
+                 button[rzopencart]
