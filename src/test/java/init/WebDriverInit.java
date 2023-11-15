@@ -23,10 +23,13 @@ public class WebDriverInit {
         chromeOptions.addArguments("--disable-notifications");
         chromeOptions.addArguments("--start-maximized");
         chromeOptions.addArguments("--disable-automation");
+        chromeOptions.addArguments("--disable-extensions");
+        chromeOptions.addArguments("--incognito");
+        chromeOptions.addArguments("disable-infobars");
 //        chromeOptions.addArguments("--headless");
         driver = new ChromeDriver(chromeOptions);
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
+//        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
     }
 
     @AfterTest
