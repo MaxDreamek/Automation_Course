@@ -28,7 +28,7 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-.idea*
+*.idea
 *.iml
 *.iws
 
@@ -36,3 +36,4 @@ log/
 target/
 /allure-results/
 /build/reports/
+rozetkaTest.txt
