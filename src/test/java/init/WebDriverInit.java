@@ -51,5 +51,12 @@ public class WebDriverInit {
         };
 
     }
-
+    public void switchHandles(int windowNumber){
+        List<String> listHandles = new ArrayList<>(driver.getWindowHandles());
+        if (windowNumber < listHandles.size()) {
+            driver.switchTo().window(listHandles.get(windowNumber));
+        } else {
+            throw new RuntimeException("This Window Handle is not Exist. Select correct window");
+        }
+    }
 }
