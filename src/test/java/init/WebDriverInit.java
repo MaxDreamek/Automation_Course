@@ -12,6 +12,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public class WebDriverInit {
     public WebDriver driver;
@@ -58,5 +60,11 @@ public class WebDriverInit {
         } else {
             throw new RuntimeException("This Window Handle is not Exist. Select correct window");
         }
+    }
+    public void changeCFCookie(String value){
+        Cookie cookie = new Cookie("cf_clearance",value);
+        driver.manage().deleteCookieNamed("cf_clearance");
+        driver.manage().addCookie(cookie);
+        driver.navigate().refresh();
     }
 }
