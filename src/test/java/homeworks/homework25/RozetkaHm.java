@@ -12,7 +12,7 @@ public class RozetkaHm extends WebDriverInit {
     @Test
     public void privacyPolicyRozetkaTest()  {
         driver.get("https://rozetka.com.ua/");
-        changeCFCookie("cOyGYfpEjtL5zSgVFNrZGaC1L5xB_knbplyziLrEkE4-1700604153-0-1-8ee6ba3e.46aafbc7.d9e7e5de-0.2.1700604153");
+        changeCFCookie("w7ZTrspj._bpegR45fbe0dr2SQFzKx3K4lUCV.WUniU-1700679015-0-1-8ee6ba3e.2f43da0f.d9e7e5de-0.2.1700679015");
 
         WebElement languageSwitchButton = driver.findElement(By.xpath("//a[contains(@class, 'lang__link')]"));
         languageSwitchButton.click();
