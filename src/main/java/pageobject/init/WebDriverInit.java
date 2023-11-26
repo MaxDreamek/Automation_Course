@@ -21,7 +21,7 @@ public class WebDriverInit {
     public WebDriverWait webDriverWait;
     private ChromeOptions chromeOptions = new ChromeOptions();
     public final String DEFAULT_URL = "https://rozetka.com.ua/";
-    public final String cfClearanceCookie = "Vsw5tdxDylyYXGFyY4BcDS7RBfQd7WhTTH84wreL0AI-1701003898-0-1-8ee6ba3e.fe6d9821.d9e7e5de-0.2.1701003898";
+    public final String cfClearanceCookie = "uhAIEP1uHqwtasOFhZhxIpCYdi_h2BbM_v_nKsN8i3g-1701007080-0-1-8ee6ba3e.bf4af1cc.d9e7e5de-0.2.1701007080";
 
 
     @BeforeMethod
