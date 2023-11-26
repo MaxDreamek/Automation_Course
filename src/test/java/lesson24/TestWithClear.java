@@ -1,9 +1,8 @@
 package lesson24;
 
-import init.WebDriverInit;
+import pageobject.init.WebDriverInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TestWithClear extends WebDriverInit {

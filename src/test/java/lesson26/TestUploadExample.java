@@ -1,9 +1,8 @@
 package lesson26;
 
-import init.WebDriverInit;
+import pageobject.init.WebDriverInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 public class TestUploadExample extends WebDriverInit {

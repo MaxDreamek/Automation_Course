@@ -1,6 +1,6 @@
 package homeworks.homework25;
 
-import init.WebDriverInit;
+import pageobject.init.WebDriverInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,7 +12,7 @@ public class RozetkaHm extends WebDriverInit {
     @Test
     public void privacyPolicyRozetkaTest()  {
         driver.get("https://rozetka.com.ua/");
-        changeCFCookie("w7ZTrspj._bpegR45fbe0dr2SQFzKx3K4lUCV.WUniU-1700679015-0-1-8ee6ba3e.2f43da0f.d9e7e5de-0.2.1700679015");
+        changeCFCookie(cfClearanceCookie);
 
         WebElement languageSwitchButton = driver.findElement(By.xpath("//a[contains(@class, 'lang__link')]"));
         languageSwitchButton.click();
@@ -25,7 +25,7 @@ public class RozetkaHm extends WebDriverInit {
         privatePolicyButton.click();
 
         SoftAssert softAssert = new SoftAssert();
-        switchHandles(1);
+        switchHandles(driver,1);
         softAssert.assertTrue(driver.getTitle().contains("Угода користувача | ROZETKA"));
         softAssert.assertTrue(driver.findElement(By.tagName("body")).getText().contains("Как удалить аккаунт?"));
         softAssert.assertTrue(driver.findElement(By.xpath("//*[text()='Как удалить аккаунт?']")).isDisplayed());
