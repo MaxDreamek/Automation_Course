@@ -1,14 +1,11 @@
 package lesson26;
 
-import init.WebDriverInit;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import pageobject.init.WebDriverInit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 public class TestStatusCodeExample extends WebDriverInit {

@@ -1,11 +1,11 @@
-package init;
+package pageobject.init;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.Cookie;
-import org.openqa.selenium.Proxy;
-import org.openqa.selenium.WebDriver;
+import org.bouncycastle.pqc.crypto.newhope.NHSecretKeyProcessor;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -20,9 +20,11 @@ public class WebDriverInit {
     public WebDriver driver;
     public WebDriverWait webDriverWait;
     private ChromeOptions chromeOptions = new ChromeOptions();
+    public final String DEFAULT_URL = "https://rozetka.com.ua/";
+    public final String cfClearanceCookie = "Vsw5tdxDylyYXGFyY4BcDS7RBfQd7WhTTH84wreL0AI-1701003898-0-1-8ee6ba3e.fe6d9821.d9e7e5de-0.2.1701003898";
 
 
-    @BeforeTest
+    @BeforeMethod
     public void initDriver() {
         WebDriverManager.chromedriver().setup();
         chromeOptions.addArguments("--disable-notifications");
@@ -37,7 +39,7 @@ public class WebDriverInit {
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
     }
 
-    @AfterTest
+    @AfterMethod
     public void closeDriver() {
         driver.quit();
     }
@@ -54,7 +56,7 @@ public class WebDriverInit {
         };
 
     }
-    public void switchHandles(int windowNumber){
+    public static void switchHandles(WebDriver driver, int windowNumber){
         List<String> listHandles = new ArrayList<>(driver.getWindowHandles());
         if (windowNumber < listHandles.size()) {
             driver.switchTo().window(listHandles.get(windowNumber));
@@ -68,4 +70,23 @@ public class WebDriverInit {
         driver.manage().addCookie(cookie);
         driver.navigate().refresh();
     }
+    public static void scrollToElement(WebDriver driver, WebElement webElement, boolean intoView){
+        ((JavascriptExecutor) driver).executeScript(String.format("arguments[0].scrollIntoView(%s)", intoView), webElement);
+    }
+    public WebElement findElementByXpath(String xpath){
+        return webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+    }
+    public static WebElement getElementBy(WebDriver driver, By element){
+        return driver.findElement(element);
+    }
+    public static WebElement getElementWillBeClickable(WebDriverWait webDriverWait, By element){
+        return webDriverWait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+    public static WebElement getElementWillBePresent(WebDriverWait webDriverWait, By element){
+        return webDriverWait.until(ExpectedConditions.presenceOfElementLocated(element));
+    }
+    public static List<WebElement> getElementsBy(WebDriver driver,By element){
+        return driver.findElements(element);
+    }
+
 }

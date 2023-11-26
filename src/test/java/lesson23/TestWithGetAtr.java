@@ -1,7 +1,7 @@
 package lesson23;
 
 
-import init.WebDriverInit;
+import pageobject.init.WebDriverInit;
 import org.openqa.selenium.By;
 
 import org.openqa.selenium.WebElement;

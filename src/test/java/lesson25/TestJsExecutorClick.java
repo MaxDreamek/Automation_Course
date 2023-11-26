@@ -1,12 +1,10 @@
 package lesson25;
 
-import init.WebDriverInit;
+import pageobject.init.WebDriverInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-
-import java.util.concurrent.TimeUnit;
 
 public class TestJsExecutorClick extends WebDriverInit {
 

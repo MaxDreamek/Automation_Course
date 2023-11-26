@@ -1,6 +1,6 @@
 package homeworks.homework25;
 
-import init.WebDriverInit;
+import pageobject.init.WebDriverInit;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
@@ -24,7 +24,7 @@ public class Hm25 extends WebDriverInit {
         privacyLink.click();
 
 
-        switchHandles(1);
+        switchHandles(driver,1);
         String stringInTitle = "Datenschutzerklärung";
         String searchText = "Sanktionslisten-Abgleich";
 
