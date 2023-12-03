@@ -3,6 +3,6 @@
 *.iws
 
 log/
-target/
+target/*
 /allure-results/
 /build/reports/
