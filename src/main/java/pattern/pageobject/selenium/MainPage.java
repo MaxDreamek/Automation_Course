@@ -1,9 +1,9 @@
 package pattern.pageobject.selenium;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class MainPage extends MainPageLocators{
 
@@ -11,7 +11,6 @@ public class MainPage extends MainPageLocators{
 
     public MainPage(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver, this);
     }
 
     public MainPage typeTextInInputSearch(String text){
@@ -26,5 +25,10 @@ public class MainPage extends MainPageLocators{
         WebElement searchBtn = driver.findElement(searchButton);
         searchBtn.click();
         return new SearchPage(driver);
+    }
+    public SideBarCategoryPage openSideBarLink(int numberOfCategory){
+        List<WebElement> sideBarCategoriesList = driver.findElements(sideBarCategories);
+        sideBarCategoriesList.get(--numberOfCategory).click();
+        return new SideBarCategoryPage(driver);
     }
 }
