@@ -19,9 +19,9 @@ import java.util.List;
 public class WebDriverInit {
     public WebDriver driver;
     public WebDriverWait webDriverWait;
-    private ChromeOptions chromeOptions = new ChromeOptions();
+    private final ChromeOptions chromeOptions = new ChromeOptions();
     public final String DEFAULT_URL = "https://rozetka.com.ua/";
-    public final String cfClearanceCookie = "C8EbmdGS00zIfBepb1ZAVkpqpT9cauxGsxPpHouvutI-1701282391-0-1-8ee6ba3e.6481558.d9e7e5de-0.2.1701282391";
+    public final String cfClearanceCookie = "F7t9JlYGVX1Nfx7u0QSK0REtFItGF4rTU5QnZrTE9Gs-1701707173-0-1-8ee6ba3e.8cecf9f3.d9e7e5de-0.2.1701707173";
 
 
     @BeforeMethod
