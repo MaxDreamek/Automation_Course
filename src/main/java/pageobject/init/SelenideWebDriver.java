@@ -16,7 +16,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 public class SelenideWebDriver {
     private final ChromeOptions chromeOptions = new ChromeOptions();
     public final String DEFAULT_URL = "https://rozetka.com.ua/";
-    public final String cfClearanceCookie = "3YPxj0L29vz266TBp.9x6J9LQI8NDgXl7jZt7z_OfXI-1701716896-0-1-8ee6ba3e.e04c223a.d9e7e5de-0.2.1701716896";
+    public final String cfClearanceCookie = "ya07FaFdWAdLQ40EvyC9ZdH6bzy6jclzdB7MZfQSgiw-1701726982-0-1-8ee6ba3e.8c2137bb.d9e7e5de-0.2.1701726982";
 
     @BeforeMethod
     public void selenideSetUp() {
@@ -28,7 +28,7 @@ public class SelenideWebDriver {
         chromeOptions.addArguments("disable-infobars");
 //        chromeOptions.addArguments("--headless");
         Configuration.browserSize = "3200х2000";
-        Configuration.timeout = 5000;
+//        Configuration.timeout = 5000;
         Configuration.browserCapabilities = chromeOptions;
     }
 
@@ -58,7 +58,7 @@ public class SelenideWebDriver {
             throw new RuntimeException("This Window Handle is not Exist. Select correct window");
         }
     }
-    public static void scrollToElement(WebDriver driver, WebElement webElement, boolean intoView){
-        ((JavascriptExecutor) driver).executeScript(String.format("arguments[0].scrollIntoView(%s)", intoView), webElement);
+    public static void scrollToElement(WebElement webElement, boolean intoView){
+        ((JavascriptExecutor) getWebDriver()).executeScript(String.format("arguments[0].scrollIntoView(%s)", intoView), webElement);
     }
 }
