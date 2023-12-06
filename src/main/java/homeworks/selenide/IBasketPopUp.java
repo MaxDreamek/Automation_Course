@@ -1,10 +1,7 @@
-package pattern.pageobject.selenide;
+package homeworks.selenide;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
 import static com.codeborne.selenide.Selenide.$x;

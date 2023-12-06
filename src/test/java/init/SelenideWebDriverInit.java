@@ -13,7 +13,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 public class SelenideWebDriverInit {
     private final ChromeOptions chromeOptions = new ChromeOptions();
     public final String DEFAULT_URL = "https://rozetka.com.ua/";
-    public final String cfClearanceCookie = "L_7De6r6rTXGNt6ZjrC06QMzr6hhaDgrbkqRKeuJbrc-1701883475-0-1-ded45ae0.1e1a7275.89d50500-0.2.1701883475";
+    public final String cfClearanceCookie = "j9dAUgjWITIeKQnHPn.gGrMjHt9Rf3A5d.vQt889SlE-1701888068-0-1-ded45ae0.8a5fe98f.89d50500-0.2.1701888068";
 
     @BeforeMethod
     public void selenideSetUp() {

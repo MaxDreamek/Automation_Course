@@ -1,4 +1,4 @@
-package pattern.pageobject.selenide;
+package homeworks.selenide;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;

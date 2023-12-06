@@ -1,14 +1,7 @@
 package lesson29;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobject.init.SelenideWebDriver;
-import pattern.pageobject.selenide.MainPageLogic;
-
-import java.util.List;
 
 import static com.codeborne.selenide.Selenide.*;
 

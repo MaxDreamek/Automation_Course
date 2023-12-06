@@ -3,10 +3,8 @@ package homeworks.homework27;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pageobject.init.SelenideWebDriver;
-import pattern.pageobject.selenide.MainPageLogic;
 
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class HomeWorkPajeObjectSelenide extends SelenideWebDriver {
     @Test

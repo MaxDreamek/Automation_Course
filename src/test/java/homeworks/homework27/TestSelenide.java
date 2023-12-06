@@ -3,18 +3,12 @@ package homeworks.homework27;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.SelenideWait;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 import pageobject.init.SelenideWebDriver;
-import pattern.pageobject.selenide.IHeader;
 
 
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static pattern.pageobject.selenide.IHeader.SEARCH_BUTTON;
 
 public class TestSelenide extends SelenideWebDriver implements IHeader {

@@ -1,8 +1,8 @@
-package pattern.pageobject.selenide;
+package homeworks.selenide;
 
 import org.openqa.selenium.WebDriver;
 
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.page;
 
 
 public class SearchPage extends SearchPageLocators {
