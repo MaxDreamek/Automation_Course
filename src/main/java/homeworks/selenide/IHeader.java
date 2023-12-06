@@ -1,4 +1,4 @@
-package pattern.pageobject.selenide;
+package homeworks.selenide;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;

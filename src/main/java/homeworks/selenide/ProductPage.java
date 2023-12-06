@@ -1,4 +1,4 @@
-package pattern.pageobject.selenide;
+package homeworks.selenide;
 
 
 public class ProductPage extends ProductPageLocators {

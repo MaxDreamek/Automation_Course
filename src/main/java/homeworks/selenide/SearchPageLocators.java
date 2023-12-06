@@ -1,7 +1,6 @@
-package pattern.pageobject.selenide;
+package homeworks.selenide;
 
 import com.codeborne.selenide.ElementsCollection;
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$$x;
 
