@@ -1,21 +1,16 @@
-package pageobject.init;
+package init;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.Cookie;
+import org.openqa.selenium.Proxy;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
-
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
 
 import static com.codeborne.selenide.Selenide.executeJavaScript;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
-public class SelenideWebDriver {
+public class SelenideWebDriverInit {
     private final ChromeOptions chromeOptions = new ChromeOptions();
     public final String DEFAULT_URL = "https://rozetka.com.ua/";
     public final String cfClearanceCookie = "L_7De6r6rTXGNt6ZjrC06QMzr6hhaDgrbkqRKeuJbrc-1701883475-0-1-ded45ae0.1e1a7275.89d50500-0.2.1701883475";

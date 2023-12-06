@@ -1,15 +1,13 @@
 package pattern.pageobject.selenide;
 
-import org.openqa.selenium.WebDriver;
+
+import com.codeborne.selenide.CollectionCondition;
 import org.testng.asserts.SoftAssert;
+
+import java.time.Duration;
 
 
 public class CategoryListingPage extends CategoryListingPageLocators implements IHeader, IBasketPopUp {
-    private WebDriver driver;
-
-    public CategoryListingPage(WebDriver driver) {
-        this.driver = driver;
-    }
 
     public CategoryListingPage clickBuyButtonOfProduct(int numberOfProduct) {
         buyButtonsOfListingProducts.get(--numberOfProduct).click();
@@ -32,6 +30,10 @@ public class CategoryListingPage extends CategoryListingPageLocators implements 
         if (finishedCheck) {
             softAssert.assertAll();
         }
+        return this;
+    }
+    public CategoryListingPage checkQuantityOfProductsTitles(int titleAmount){
+        titlesOfProductInListing.shouldBe(CollectionCondition.size(titleAmount), Duration.ofSeconds(10));
         return this;
     }
 }
