@@ -32,6 +32,7 @@ public class CategoryListingPage extends CategoryListingPageLocators implements 
         }
         return this;
     }
+
     public CategoryListingPage checkQuantityOfProductsTitles(int titleAmount){
         titlesOfProductInListing.shouldBe(CollectionCondition.size(titleAmount), Duration.ofSeconds(10));
         return this;

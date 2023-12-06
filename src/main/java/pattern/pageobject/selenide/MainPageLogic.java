@@ -12,6 +12,7 @@ public class MainPageLogic extends MainPageLocators implements IHeader {
         sideBarCategories.get(--numberOfCategory).shouldBe(Condition.visible).click();
         return page(SideBarCategoryPage.class);
     }
+
     public MainPageLogic checkCategoriesQuantity(int categories){
         sideBarCategories.shouldHave(CollectionCondition.size(categories));
         return this;

@@ -1,7 +1,6 @@
 package pattern.pageobject.selenide;
 
 
-
 public class ProductPage extends ProductPageLocators {
 
     public String getTitleText(){

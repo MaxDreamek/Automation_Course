@@ -14,23 +14,28 @@ public interface IHeader {
     public SelenideElement INPUT_SEARCH = $(By.name("search"));
     public SelenideElement SEARCH_BUTTON = $x("//button[contains(@class,  'search-form__submit')]");
 
-    default void checkBasketCounterI(SoftAssert softAssert, String expectedString){
+    default void checkBasketCounterI(SoftAssert softAssert, String expectedString) {
         String basketCounterValue = BASKET_COUNTER.shouldBe(Condition.visible).getText().trim();
         softAssert.assertEquals(basketCounterValue, expectedString, "The basket counter is not equal to " + expectedString);
     }
-    default void openBasketPopUp(){
+
+    default void openBasketPopUp() {
         BASKET_ICON.shouldBe(Condition.enabled).click();
     }
-    private void typeTextInInputSearch(String text){
+
+    private void typeTextInInputSearch(String text) {
         INPUT_SEARCH.setValue(text);
     }
-    private void clearOfInputSearch(){
+
+    private void clearOfInputSearch() {
         INPUT_SEARCH.clear();
     }
-    private void clickBtnSearch(){
+
+    private void clickBtnSearch() {
         SEARCH_BUTTON.click();
     }
-    default void searchByValue(String text){
+
+    default void searchByValue(String text) {
         typeTextInInputSearch(text);
         clickBtnSearch();
     }

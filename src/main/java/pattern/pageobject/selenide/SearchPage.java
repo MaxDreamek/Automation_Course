@@ -11,7 +11,8 @@ public class SearchPage extends SearchPageLocators {
     public SearchPage(WebDriver driver) {
         this.driver = driver;
     }
-    public ProductPage clickOnProductByIndex(int titleIndex){
+
+    public ProductPage clickOnProductByIndex(int titleIndex) {
         titlesOfProducts.get(titleIndex).click();
         return page(ProductPage.class);
     }
