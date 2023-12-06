@@ -9,10 +9,10 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
 public interface IHeader {
-    SelenideElement BASKET_COUNTER = $x("//rz-icon-badge/span");
-    SelenideElement BASKET_ICON = $x("//button[@rzopencart]");
-    SelenideElement INPUT_SEARCH = $(By.name("search"));
-    SelenideElement SEARCH_BUTTON = $x("//button[contains(@class,  'search-form__submit')]");
+    public SelenideElement BASKET_COUNTER = $x("//rz-icon-badge/span");
+    public SelenideElement BASKET_ICON = $x("//button[@rzopencart]");
+    public SelenideElement INPUT_SEARCH = $(By.name("search"));
+    public SelenideElement SEARCH_BUTTON = $x("//button[contains(@class,  'search-form__submit')]");
 
     default void checkBasketCounterI(SoftAssert softAssert, String expectedString){
         String basketCounterValue = BASKET_COUNTER.shouldBe(Condition.visible).getText().trim();

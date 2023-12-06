@@ -2,6 +2,8 @@ package pattern.pageobject.selenide;
 
 import org.openqa.selenium.WebDriver;
 
+import static com.codeborne.selenide.Selenide.*;
+
 
 public class SearchPage extends SearchPageLocators {
     private WebDriver driver;
@@ -11,7 +13,7 @@ public class SearchPage extends SearchPageLocators {
     }
     public ProductPage clickOnProductByIndex(int titleIndex){
         titlesOfProducts.get(titleIndex).click();
-        return new ProductPage(driver);
+        return page(ProductPage.class);
     }
 
 }
