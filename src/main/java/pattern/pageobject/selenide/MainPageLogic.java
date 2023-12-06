@@ -13,7 +13,7 @@ public class MainPageLogic extends MainPageLocators implements IHeader {
         return page(SideBarCategoryPage.class);
     }
 
-    public MainPageLogic checkCategoriesQuantity(int categories) {
+    public MainPageLogic checkCategoriesQuantity(int categories){
         sideBarCategories.shouldHave(CollectionCondition.size(categories));
         return this;
     }
