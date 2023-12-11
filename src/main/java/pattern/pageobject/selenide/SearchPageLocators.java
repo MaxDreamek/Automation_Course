@@ -1,4 +1,4 @@
-package homeworks.selenide;
+package pattern.pageobject.selenide;
 
 import com.codeborne.selenide.ElementsCollection;
 

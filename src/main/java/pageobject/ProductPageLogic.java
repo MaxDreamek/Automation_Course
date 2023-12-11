@@ -6,7 +6,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static pageobject.init.WebDriverInit.getElementWillBePresent;
+import static pattern.pageobject.init.WebDriverInit.getElementWillBePresent;
+
 
 public class ProductPageLogic extends ProductPage {
     private WebDriver driver;

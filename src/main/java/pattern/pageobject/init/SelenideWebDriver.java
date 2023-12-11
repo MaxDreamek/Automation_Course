@@ -1,4 +1,4 @@
-package init;
+package pattern.pageobject.init;
 
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.*;
@@ -13,7 +13,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 public class SelenideWebDriver {
     private final ChromeOptions chromeOptions = new ChromeOptions();
     public final String DEFAULT_URL = "https://rozetka.com.ua/";
-    public final String cfClearanceCookie = "L_7De6r6rTXGNt6ZjrC06QMzr6hhaDgrbkqRKeuJbrc-1701883475-0-1-ded45ae0.1e1a7275.89d50500-0.2.1701883475";
+    public final String cfClearanceCookie = "uDIYeNipXswVnN2CGEpehWpSWa24f61Gfu0lGuH64C0-1702322777-0-1-ded45ae0.512ffa9.89d50500-0.2.1702322777";
 
     @BeforeMethod
     public void selenideSetUp() {

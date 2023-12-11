@@ -1,4 +1,4 @@
-package init;
+package pattern.pageobject.init;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;

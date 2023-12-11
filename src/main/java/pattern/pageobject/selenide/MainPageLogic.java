@@ -2,9 +2,6 @@ package pattern.pageobject.selenide;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
-import homeworks.selenide.IHeader;
-import homeworks.selenide.SearchPage;
-import homeworks.selenide.SideBarCategoryPage;
 
 import static com.codeborne.selenide.Selenide.page;
 

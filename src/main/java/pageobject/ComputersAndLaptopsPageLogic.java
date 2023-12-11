@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
+import static pattern.pageobject.init.WebDriverInit.scrollToElement;
+
 public class ComputersAndLaptopsPageLogic extends ComputersAndLaptopsPage {
     private WebDriver driver;
     private WebDriverWait webDriverWait;
@@ -18,7 +20,7 @@ public class ComputersAndLaptopsPageLogic extends ComputersAndLaptopsPage {
 
     public LaptopsPageLogic openLaptopCategory() {
         WebElement laptopCategoryLink = webDriverWait.until(ExpectedConditions.elementToBeClickable(laptopCategory));
-        scroll(driver, laptopCategoryLink, true);
+        scrollToElement(driver, laptopCategoryLink, true);
         laptopCategoryLink.click();
         return new LaptopsPageLogic(driver);
     }

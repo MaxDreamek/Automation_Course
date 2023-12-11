@@ -1,7 +1,7 @@
 package lesson29;
 
 import org.testng.annotations.Test;
-import init.SelenideWebDriver;
+import pattern.pageobject.init.SelenideWebDriver;
 import pattern.pageobject.selenide.MainPageLogic;
 
 import static com.codeborne.selenide.Selenide.*;

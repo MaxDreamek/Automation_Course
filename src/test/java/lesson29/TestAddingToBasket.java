@@ -3,7 +3,7 @@ package lesson29;
 import com.codeborne.selenide.Condition;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import init.SelenideWebDriver;
+import pattern.pageobject.init.SelenideWebDriver;
 
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.open;

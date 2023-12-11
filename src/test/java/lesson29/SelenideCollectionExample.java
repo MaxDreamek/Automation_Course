@@ -4,7 +4,7 @@ import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import org.testng.annotations.Test;
-import init.SelenideWebDriver;
+import pattern.pageobject.init.SelenideWebDriver;
 
 import static com.codeborne.selenide.Selenide.*;
 

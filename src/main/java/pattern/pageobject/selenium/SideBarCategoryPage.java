@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
+import static pattern.pageobject.init.SelenideWebDriver.scrollToElement;
+
 
 public class SideBarCategoryPage extends SideBarCategoryPageLocators {
     private WebDriver driver;
@@ -19,7 +21,7 @@ public class SideBarCategoryPage extends SideBarCategoryPageLocators {
     }
     public CategoryListingPage openCategoryListing(int numberOfCategory){
         List<WebElement> parentCategoriesList = webDriverWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(parentCategories));
-        scrolToElement(parentCategoriesList.get(--numberOfCategory),true);
+        scrollToElement(parentCategoriesList.get(--numberOfCategory),true);
         parentCategoriesList.get(numberOfCategory).click();
         return new CategoryListingPage(driver);
     }

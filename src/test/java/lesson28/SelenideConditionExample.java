@@ -3,7 +3,7 @@ package lesson28;
 import com.codeborne.selenide.Condition;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-import init.SelenideWebDriver;
+import pattern.pageobject.init.SelenideWebDriver;
 
 import java.time.Duration;
 

@@ -2,7 +2,7 @@ package homeworks.homework27;
 
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import init.WebDriverInit;
+import pattern.pageobject.init.WebDriverInit;
 //import pattern.pageobject.selenium.MainPage;
 
 public class HomeWorkPajeObject extends WebDriverInit {

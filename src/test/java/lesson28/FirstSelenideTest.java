@@ -3,7 +3,7 @@ package lesson28;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-import init.SelenideWebDriver;
+import pattern.pageobject.init.SelenideWebDriver;
 
 import static com.codeborne.selenide.Selenide.*;
 

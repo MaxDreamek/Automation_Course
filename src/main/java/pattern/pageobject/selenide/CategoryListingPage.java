@@ -2,8 +2,6 @@ package pattern.pageobject.selenide;
 
 
 import com.codeborne.selenide.CollectionCondition;
-import homeworks.selenide.IBasketPopUp;
-import homeworks.selenide.IHeader;
 import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;

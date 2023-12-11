@@ -1,6 +1,6 @@
 package homeworks.homework25;
 
-import init.WebDriverInit;
+import pattern.pageobject.init.WebDriverInit;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;

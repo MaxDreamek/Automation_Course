@@ -3,7 +3,7 @@ package homeworks.homework26;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pageobject.MainPageLogic;
-import init.WebDriverInit;
+import pattern.pageobject.init.WebDriverInit;
 import org.testng.annotations.Test;
 
 

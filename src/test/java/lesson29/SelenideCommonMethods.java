@@ -3,7 +3,7 @@ package lesson29;
 
 import com.codeborne.selenide.SelenideElement;
 import org.testng.annotations.Test;
-import init.SelenideWebDriver;
+import pattern.pageobject.init.SelenideWebDriver;
 import pattern.pageobject.selenide.IHeader;
 
 import static com.codeborne.selenide.Selectors.byText;

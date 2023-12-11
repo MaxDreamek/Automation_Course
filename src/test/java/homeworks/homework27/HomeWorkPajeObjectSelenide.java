@@ -2,7 +2,7 @@ package homeworks.homework27;
 
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import init.SelenideWebDriver;
+import pattern.pageobject.init.SelenideWebDriver;
 import pattern.pageobject.selenide.MainPageLogic;
 
 import static com.codeborne.selenide.Selenide.open;

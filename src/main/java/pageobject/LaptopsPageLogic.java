@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
+import static pattern.pageobject.init.WebDriverInit.*;
+
 public class LaptopsPageLogic extends LaptopsPage {
     private WebDriver driver;
     private WebDriverWait webDriverWait;
