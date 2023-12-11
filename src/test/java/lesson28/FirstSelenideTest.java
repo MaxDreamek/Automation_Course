@@ -1,17 +1,11 @@
 package lesson28;
 
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Cookie;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pageobject.init.SelenideWebDriver;
+import init.SelenideWebDriver;
 
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class FirstSelenideTest extends SelenideWebDriver {
     @Test

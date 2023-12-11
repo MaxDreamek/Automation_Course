@@ -1,6 +1,6 @@
 package lesson24;
 
-import pageobject.init.WebDriverInit;
+import init.WebDriverInit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;

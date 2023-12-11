@@ -2,14 +2,12 @@ package lesson28;
 
 import com.codeborne.selenide.Condition;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Cookie;
 import org.testng.annotations.Test;
-import pageobject.init.SelenideWebDriver;
+import init.SelenideWebDriver;
 
 import java.time.Duration;
 
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class SelenideConditionExample extends SelenideWebDriver {
 

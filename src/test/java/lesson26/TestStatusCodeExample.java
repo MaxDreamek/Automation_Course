@@ -1,6 +1,6 @@
 package lesson26;
 
-import pageobject.init.WebDriverInit;
+import init.WebDriverInit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

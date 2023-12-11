@@ -2,7 +2,7 @@ package pageobject;
 
 import org.openqa.selenium.WebDriver;
 
-import static pageobject.init.WebDriverInit.getElementBy;
+
 
 public class MainPageLogic extends MainPage {
     private WebDriver driver;
@@ -12,7 +12,7 @@ public class MainPageLogic extends MainPage {
     }
 
     public ComputersAndLaptopsPageLogic openComputersAndLaptopsPage() {
-        getElementBy(driver, laptopsAndComputersLink).click();
+        driver.findElement(laptopsAndComputersLink).click();
         return new ComputersAndLaptopsPageLogic(driver);
     }
 
