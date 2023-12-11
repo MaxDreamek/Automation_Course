@@ -5,11 +5,11 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.testng.annotations.Test;
 
-import pageobject.init.SelenideWebDriver;
+import init.SelenideWebDriver;
+import pattern.pageobject.selenide.IHeader;
 
 
 import static com.codeborne.selenide.Selenide.*;
-import static pattern.pageobject.selenide.IHeader.SEARCH_BUTTON;
 
 public class TestSelenide extends SelenideWebDriver implements IHeader {
     @Test

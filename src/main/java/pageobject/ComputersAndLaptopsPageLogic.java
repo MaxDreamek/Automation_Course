@@ -2,11 +2,10 @@ package pageobject;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-
-import static pageobject.init.WebDriverInit.*;
 
 public class ComputersAndLaptopsPageLogic extends ComputersAndLaptopsPage {
     private WebDriver driver;
@@ -18,8 +17,8 @@ public class ComputersAndLaptopsPageLogic extends ComputersAndLaptopsPage {
     }
 
     public LaptopsPageLogic openLaptopCategory() {
-        WebElement laptopCategoryLink = getElementWillBeClickable(webDriverWait, laptopCategory);
-        scrollToElement(driver, laptopCategoryLink, true);
+        WebElement laptopCategoryLink = webDriverWait.until(ExpectedConditions.elementToBeClickable(laptopCategory));
+        scroll(driver, laptopCategoryLink, true);
         laptopCategoryLink.click();
         return new LaptopsPageLogic(driver);
     }

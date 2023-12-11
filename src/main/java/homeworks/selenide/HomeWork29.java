@@ -1,10 +1,13 @@
 package homeworks.selenide;
 
-import init.SelenideWebDriverInit;
+
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import pageobject.init.SelenideWebDriver;
 
-public class HomeWork29 extends SelenideWebDriverInit {
+import static com.codeborne.selenide.Selenide.open;
+
+public class HomeWork29 extends SelenideWebDriver {
     @Test
     public void checkAddedProductToBasket() {
         open(DEFAULT_URL);

@@ -3,12 +3,11 @@ package pageobject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
-
-import static pageobject.init.WebDriverInit.*;
 
 public class LaptopsPageLogic extends LaptopsPage {
     private WebDriver driver;
@@ -21,24 +20,25 @@ public class LaptopsPageLogic extends LaptopsPage {
     }
 
     public LaptopsPageLogic waitForPageLoad() {
-        getElementWillBePresent(webDriverWait, frameWichLastLoaded);
+        webDriverWait.until(ExpectedConditions.presenceOfElementLocated(frameWichLastLoaded));
         return this;
     }
 
     public LaptopsPageLogic filterByRozetkaSeller() {
-        getElementBy(driver, rozetkaSellerFilter).click();
+        driver.findElement(rozetkaSellerFilter).click();
         return this;
     }
 
     public LaptopsPageLogic setLowFilterByPrice(int lowPrice) {
-        WebElement filterLowPrice = getElementWillBeClickable(webDriverWait, inputPriceFilterLow);
+        WebElement filterLowPrice = webDriverWait.until(ExpectedConditions.elementToBeClickable(inputPriceFilterLow));
         filterLowPrice.clear();
         filterLowPrice.sendKeys(String.valueOf(lowPrice));
         return this;
     }
 
     public LaptopsPageLogic setHighFilterByPrice(int highPrice) {
-        WebElement filterInputHighPrice = getElementWillBeClickable(webDriverWait, inputPriceFilterHigh);
+        WebElement filterInputHighPrice = webDriverWait.until(ExpectedConditions.elementToBeClickable(inputPriceFilterHigh));
+        scrollToElement(driver, filterInputHighPrice, false);
         scrollToElement(driver, filterInputHighPrice, false);
         filterInputHighPrice.clear();
         filterInputHighPrice.sendKeys(String.valueOf(highPrice));
